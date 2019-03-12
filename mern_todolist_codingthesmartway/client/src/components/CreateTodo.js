@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import axios from "axios";
 
 class CreateTodo extends Component {
   constructor(props) {
@@ -24,11 +25,6 @@ class CreateTodo extends Component {
     } else if (e.currentTarget.id === "priorityHigh") {
       this.setState({ todo_priority: "High" });
     }
-    //else if (e.currentTarget.id === "CreateToDoButton") {
-
-    // }
-
-    //    console.log("Someone is typing something");
   };
 
   handleOnSubmit = e => {
@@ -41,7 +37,17 @@ class CreateTodo extends Component {
       "Priority :",
       this.state.todo_priority
     );
+    const newTodo = {
+      todo_description: this.state.todo_description,
+      todo_responsible: this.state.todo_responsible,
+      todo_priority: this.state.todo_priority,
+      todo_completed: this.state.todo_completed
+    };
+    axios
+      .post("http://localhost:4000/add", newTodo)
+      .then(res => console.log(res.data));
   };
+
   render() {
     return (
       <div style={{ marginTop: 20 }}>
