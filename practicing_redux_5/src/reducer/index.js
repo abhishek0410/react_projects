@@ -1,22 +1,32 @@
 import { combineReducers } from "redux";
 
-const Reducer_counters = () => {
-  const counter_list = [
-    { id: "1", count: 0 },
-    { id: "2", count: 0 },
-    { id: "3", count: 0 },
-    { id: "4", count: 0 }
-  ];
+const counter_list = [
+  { id: "1", count: 0 },
+  { id: "2", count: 0 },
+  { id: "3", count: 0 },
+  { id: "4", count: 0 }
+];
 
-  return counter_list;
+const Reducer_currentCounterList = (state = counter_list) => {
+  console.log("we are in the Reducer_currentCounterList");
+  return state;
 };
 
-const Reducer_selected_counter_Increment = (
-  counter_selected = null,
-  action
-) => {
+const Reducer_selected_counter_Increment = action => {
+  console.log("We are in the Reducer_selected_counter_Increment");
+  if (action === undefined) {
+    console.log("action is undefined");
+    return null;
+  }
+
+  if (action === null) {
+    console.log("action is null");
+    return null;
+  }
+
   if (action.type === "Incremement_the_counter") {
     console.log("Increment reducer called with  ", action);
+
     return action.payLoad;
   }
 
@@ -31,7 +41,7 @@ const Reducer_selected_counter_Delete = (counter = null, action) => {
 };
 
 export default combineReducers({
-  Reducer_counters: Reducer_counters,
+  Reducer_currentCounterList: Reducer_currentCounterList,
   Reducer_selected_counter_Increment: Reducer_selected_counter_Increment,
   Reducer_selected_counter_Delete: Reducer_selected_counter_Delete
 });

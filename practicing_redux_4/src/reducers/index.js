@@ -1,6 +1,7 @@
 import { combineReducers } from "redux";
 
 const songsReducer = () => {
+  console.log("songReducer called");
   return [
     { title: "Toone mere jaana ", duration: "4:30" },
     { title: "kabhi aw haqiraq", duration: "5:30" },
@@ -10,7 +11,7 @@ const songsReducer = () => {
 };
 
 const selectedSongReducer = (selectedSong = null, action) => {
-  //   console.log("selectedSongReducer called");
+  console.log("selectedSongReducer called");
 
   if (action.type === "SONG_SELECTED") {
     return action.payload;

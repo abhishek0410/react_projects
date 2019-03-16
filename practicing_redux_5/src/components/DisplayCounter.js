@@ -8,7 +8,7 @@ import {
 import Actions from "../action";
 class DisplayCounter extends Component {
   render() {
-    return this.props.Reducer_counters.map(counter => {
+    return this.props.Reducer_currentCounterList.map(counter => {
       return (
         <div key={counter.id}>
           <span className="badge badge-primary">{counter.count}</span>
@@ -31,7 +31,7 @@ class DisplayCounter extends Component {
 }
 
 const mapStateToProps = state => {
-  return { Reducer_counters: state.Reducer_counters };
+  return { Reducer_currentCounterList: state.Reducer_currentCounterList };
 };
 
 export default connect(
