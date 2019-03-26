@@ -8,7 +8,10 @@
     "eslint-plugin-import": "^2.14.0",
     "eslint-plugin-jsx-a11y": "^6.1.1",
     "eslint-plugin-react": "^7.11.1",
-    "react-scripts": "^1.1.5"
+    "install": "^0.12.2",
+    "npm": "^6.9.0",
+    "react-scripts": "^1.1.5",
+    "style-loader": "^0.23.1"
   },
   "dependencies": {
     "async": "2.1.5",
@@ -61,6 +64,8 @@
     "redux-persist-immutable": "4.2.0",
     "rmwc": "1.7.6",
     "slick-carousel": "1.6.0",
+    "style": "0.0.3",
+    "styles": "^0.2.1",
     "transit-immutable-js": "0.7.0",
     "transit-js": "0.8.846",
     "validator": "6.2.0"

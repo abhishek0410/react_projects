@@ -9,7 +9,7 @@ class TodoList extends Component {
   };
 
   componentDidMount() {
-    const todolist = axios.get("http://localhost:4000/todos/").then(res => {
+    const todolist = axios.get("http://localhost:5000/todos/").then(res => {
       // console.log("We got the following data from the server ", res.data);
       this.setState({ todolist: res.data });
     });
@@ -21,10 +21,10 @@ class TodoList extends Component {
     // });
     console.log(todoItem);
     axios
-      .put("http://localhost:4000/delete/" + todoItem._id)
+      .put("http://localhost:5000/delete/" + todoItem._id)
       .then(() => this.componentDidMount());
 
-    // axios.get("http://localhost:4000/todos/").then(res => {
+    // axios.get("http://localhost:5000/todos/").then(res => {
     //   console.log("rerendering again");
     //   this.setState({ todolist: res.data });
     // });

@@ -1,0 +1,122 @@
+
+.mdc-snackbar{
+  z-index:1000;
+}
+
+div.browser-full-width {
+  width: 100%;
+  width: -moz-available;          /* WebKit-based browsers will ignore this. */
+  width: -webkit-fill-available;  /* Mozilla-based browsers will ignore this. */
+  width: fill-available;
+}
+
+/* buttons in table view */
+.topright-actions {
+  float: right;
+  margin: -3px 15px 6px;
+  position: relative;
+}
+.topright-actions button {
+  margin: 1em 0;
+}
+/* date range picker */
+.DateRangePicker {
+-webkit-transform:scale(0.84);
+-moz-transform:scale(0.84);
+-ms-transform:scale(0.84);
+-o-transform:scale(0.84);
+  transform:scale(0.84);
+  left:-5px;
+  z-index: 1
+}
+@media (max-width:788px) {
+  .DateRangePicker {
+    left:-30px;
+  }
+  .topright-actions {
+  margin:0;
+ }
+
+}
+/*fieldsets */
+fieldset[disabled] .mdl-textfield .mdl-textfield__input, .mdl-textfield.is-disabled .mdl-textfield__input {
+    color: rgb(212, 214, 216)
+}
+
+.slider {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 25px;
+  background: #d3d3d3;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+}
+
+.slider:hover {
+  opacity: 1;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 25px;
+  height: 25px;
+  background: #4CAF50;
+  cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+  width: 25px;
+  height: 25px;
+  background: #4CAF50;
+  cursor: pointer;
+}
+
+button.mdc-button {
+  padding-top:4px;
+}
+
+button.mdc-button i {
+  vertical-align: middle;
+  vertical-align: -webkit-baseline-middle;
+  vertical-align: -moz-middle-with-baseline;
+}
+
+.ticket-detail .mdc-list-item {
+  height: auto !important;
+}
+
+div.mdc-text-field input.mdc-text-field__input {
+  border-bottom-color: white;
+  height: auto;
+}
+
+div.Select div.Select-control span.Select-multi-value-wrapper div.Select-value span.Select-value-label {
+  color: #000000;
+}
+
+div.mdl-grid div.mdl-cell div.mdc-text-field, div.mdl-grid div.mdl-cell div.mdc-text-field--upgraded {
+  margin-top:0;
+  margin-bottom:0;
+  width:100%;
+}
+/*
+div.mdc-text-field label.mdc-floating-label {
+  color:#e8e8e8;
+}
+
+div.mdc-text-field div.mdc-line-ripple {
+  background-color:white;
+}
+
+div.mdc-text-field:not(.mdc-text-field--disabled):not(.mdc-text-field--outlined):not(.mdc-text-field--textarea) .mdc-text-field__input {
+
+  color:white;
+}
+
+div.mdc-text-field--focused:not(.mdc-text-field--disabled) label.mdc-floating-label {
+
+  color:#e8e8e8
+}*/
