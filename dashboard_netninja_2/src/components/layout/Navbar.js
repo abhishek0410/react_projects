@@ -12,7 +12,7 @@ const Navbar = props => {
     <nav className="nav-wrapper grey darken-3">
       <div className="container">
         <Link className="brand-log" to="/">
-          Mario Plan
+          Abhi@shek for this space
         </Link>
         <SignedInLinks />
         <SignedOutLinks />
